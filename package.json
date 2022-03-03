@@ -66,7 +66,8 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.{js,ts,tsx}",
     "lint": "eslint src/**/*.{js,ts,tsx}",
-    "link-react": "cd example/node_modules/react && npm link && cd ../react-dom && npm link && cd ../../.. && npm link react react-dom"
+    "link-react": "cd example/node_modules/react && npm link && cd ../react-dom && npm link && cd ../../.. && npm link react react-dom",
+    "vrau": "webpack && tsc && cp -R ./src/assets ./dist && cp -R ./dist ./example/node_modules/react-custom-roulette && cd example && yarn start"
   },
   "husky": {
     "hooks": {
