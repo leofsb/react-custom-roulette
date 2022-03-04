@@ -4,34 +4,47 @@ import './App.css';
 import { Wheel } from 'react-custom-roulette';
 
 const data = [
-  { option: 'REACT' },
-  { option: 'CUSTOM' },
-  { option: 'ROULETTE', style: { textColor: '#f9dd50' } },
-  { option: 'WHEEL' },
-  { option: 'REACT' },
-  { option: 'CUSTOM' },
-  { option: 'ROULETTE', style: { textColor: '#70bbe0' } },
-  { option: 'WHEEL' },
+  { option: 'CASHBACK' },
+  { option: 'SKIN' },
+  { option: 'NADA', style: { textColor: '#f9dd50' } },
+  { option: 'NG.TOKENS' ,style: { textColor: '#fff' }},
+  { option: '+1 GIRO' },
+  { option: 'CUPOM' },
+  { option: 'CASHBACK' },
+  { option: 'SKIN' },
+  { option: 'NADA', style: { textColor: '#f9dd50' } },
+  { option: 'NG.TOKENS' ,style: { textColor: '#fff' }},
+  { option: '+1 GIRO' },
+  { option: 'CUPOM' },
+  // { option: 'ROULETTE', style: { textColor: '#70bbe0' } },
+  // { option: 'WHEEL' },
 ];
 
-const backgroundColors = ['#ff8f43', '#70bbe0', '#0b3351', '#f9dd50'];
+const backgroundColors = [
+  "rgb(125,44,245)",
+  "rgb(1,205,10)",
+  "rgb(254,0,3)",
+  "#000",
+  "rgb(193,193,193)",
+  "rgb(241,241,241)",
+];
 const textColors = ['#0b3351'];
-const outerBorderColor = '#eeeeee';
-const outerBorderWidth = 10;
-const innerBorderColor = '#30261a';
-const innerBorderWidth = 0;
-const innerRadius = 0;
-const radiusLineColor = '#eeeeee';
-const radiusLineWidth = 8;
-const fontSize = 17;
-const textDistance = 60;
+const outerBorderColor = '#C5C5C5';//'#eeeeee';
+const outerBorderWidth = 1;
+const innerBorderColor = '#C5C5C5';//'#eeeeee';//'#30261a';
+const innerBorderWidth = 1;
+const innerRadius = 75;
+const radiusLineColor = '#C5C5C5';//'#eeeeee';
+const radiusLineWidth = 1;
+const fontSize = 12;
+const textDistance = 86;
 
 const App = () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
 
   const handleSpinClick = () => {
-    const newPrizeNumber = Math.floor(Math.random() * data.length)
+    const newPrizeNumber = 1
     setPrizeNumber(newPrizeNumber)
     setMustSpin(true)
   }
@@ -53,7 +66,7 @@ const App = () => {
           innerBorderWidth={innerBorderWidth}
           radiusLineColor={radiusLineColor}
           radiusLineWidth={radiusLineWidth}
-          // perpendicularText
+          perpendicularText
           textDistance={textDistance}
 
           onStopSpinning={() => {
